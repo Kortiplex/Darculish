@@ -1,0 +1,21 @@
+{
+  "name": "darcula-ish",
+  "displayName": "Darcula-ish",
+  "description": "Visual Studio Code theme that attempts to replicate the style of JetBrain's Darcula theme.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Darcula-ish",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Darcula-ish-color-theme.json"
+      }
+    ]
+  }
+}
