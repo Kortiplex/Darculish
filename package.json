@@ -1,7 +1,7 @@
 {
   "name": "darcula-ish",
   "displayName": "Darcula-ish",
-  "description": "Visual Studio Code theme that attempts to replicate the style of JetBrain's Darcula theme.",
+  "description": "Visual Studio Code theme that aims to replicate the style of JetBrain's Darcula theme.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.72.0"
