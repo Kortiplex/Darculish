@@ -190,6 +190,8 @@
 		
 
 		// ### Start Custom ###
+
+		// -> Primitive Classes/Types
 		{
 			"name": "Primitive Types",
 			"scope": "storage.type.primitive",
@@ -199,40 +201,8 @@
 			}
 		},
 
-		{
-			"name": "Class Entity Identifier",
-			"scope": [
-				"entity.name.type.class"
-			],
-			"settings": {
-				"foreground": "#eeffff",
-				"fontStyle": ""
-			}
-		},
 
-		{
-			"name": "Class Definition Variable",
-			"scope": [
-				"meta.definition.variable storage.type",
-				"meta.method.identifier storage.type"
-			],
-			"settings": {
-				"foreground": "#eeffff",
-				"fontStyle": ""
-			}
-		},
-
-		{
-			"name": "Return Type",
-			"scope": [
-				"meta.method.return-type storage.type"
-			],
-			"settings": {
-				"foreground": "#eeffff",
-				"fontStyle": ""
-			}
-		},
-
+		// -> Annotations
 		{
 			"name": "Annotation",
 			"scope": [
@@ -244,7 +214,6 @@
 				"fontStyle": ""
 			}
 		},
-
 		{
 			"name": "Annotation Extras",
 			"scope": [
@@ -256,20 +225,46 @@
 				"fontStyle": ""
 			}
 		},
-		
+
+
+		// -> Classes/Types
 		{
-			"name": "Variables/Properties/Fields",
+			"name": "Class/Type Entity Identifier",
 			"scope": [
-				"variable.parameter",
-				"meta.method-call"
+				"entity.name.type.class"
 			],
 			"settings": {
-				"foreground": "#BF93D8",
+				"foreground": "#d9e4eb",
 				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Methods and Functions",
+			"name": "Class/Type Variable",
+			"scope": [
+				"meta.definition.variable storage.type",
+				"meta.method.identifier storage.type",
+				"meta.class meta.method "
+			],
+			"settings": {
+				"foreground": "#d9e4eb",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Return Class/Type",
+			"scope": [
+				"meta.method.return-type storage.type"
+			],
+			"settings": {
+				"foreground": "#d9e4eb",
+				"fontStyle": ""
+			}
+		},
+
+		
+		// -> Method/Function Identifier
+		{
+			"name": "Method and Function Identifier",
 			"scope": [
 				"entity.name.function"
 			],
@@ -278,20 +273,36 @@
 				"fontStyle": ""
 			}
 		},
+		
 
-
+		// -> Variables and Parameters
 		{
-			"name": "Method and Function Parameters",
+			"name": "Class Variables/Properties/Fields",
 			"scope": [
-				"variable.parameter",
+				"variable",
+				"meta.class variable",
 				"meta.method-call"
 			],
 			"settings": {
-				"foreground": "#cbd6e4",
+				"foreground": "#BF93D8",
+				"fontStyle": ""
+			}
+		},
+
+		{
+			"name": "Method and Function Variables/Parameters",
+			"scope": [
+				"variable.parameter",
+				"meta.method-call",
+				"variable.other.definition meta.method.variable"
+			],
+			"settings": {
+				"foreground": "#A9B7C6",
 				"fontStyle": ""
 			}
 		},
 		
+		// -> Keywords and Values
 		{
 			"name": "Keywords",
 			"scope": [
@@ -303,6 +314,8 @@
 				"fontStyle": ""
 			}
 		},
+
+
 
 		{
 			"name": "Enclosures and Punctuation",
@@ -318,10 +331,22 @@
 			}
 		},
 
-
-
 		{
-			"name": "Strings",
+			"name": "Storage",
+			"scope": [
+				"storage.type",
+			],
+			"settings": {
+				"foreground": "#A9B7C6",
+				"fontStyle": ""
+			}
+		},
+		
+
+
+		// -> Strings, Numbers, and Boolean Values
+		{
+			"name": "String Values",
 			"scope": [
 				"string", 
 				"string.tag", 
@@ -333,7 +358,6 @@
 				"foreground": "#70a858"
 			}
 		},
-
 		{
 			"name": "String Extras",
 			"scope": [
@@ -344,17 +368,6 @@
 			}
 		},
 		
-		{
-			"name": "Boolean Values",
-			"scope": [
-				"constant.language"
-			],
-			"settings": {
-				"foreground": "#DB7E32",
-				"fontStyle": ""
-			}
-		},
-
 		{
 			"name": "Numerical Values",
 			"scope": [
@@ -370,6 +383,19 @@
 		},
 
 		{
+			"name": "Boolean Values",
+			"scope": [
+				"constant.language"
+			],
+			"settings": {
+				"foreground": "#DB7E32",
+				"fontStyle": ""
+			}
+		},
+
+
+		// -> Operators and Misc
+		{
 			"name": "Operators",
 			"scope": [
 				"keyword.operator.assignment",
@@ -380,7 +406,6 @@
 				"fontStyle": ""
 			}
 		},
-
 
 		{
 			"name": "Operator, Misc",
@@ -404,8 +429,8 @@
 		},
 
 		{
-			"name": "Java Class Import",
-			"scope": "storage.modifier.import.java",
+			"name": "Import Statement",
+			"scope": "storage.modifier.import",
 			"settings": {
 				"foreground": "#A9B7C6",
 				"fontStyle": ""
@@ -413,31 +438,12 @@
 		},
 
 
-		
-
-		
-
-		{
-			"name": "Variable Definition",
-			"scope": "variable.other.definition",
-			"settings": {
-				"foreground": "#BF93D8",
-				"fontStyle": ""
-			}
-		},
-
-
-
-
-		
-
-
 		// ### End Custom ###
 
 		{
 			"name": "Variables",
 			"scope": [
-				"variable",
+				// "variable",
 				"string constant.other.placeholder"
 			],
 			"settings": {
@@ -467,7 +473,7 @@
 			"name": "Keyword, Storage",
 			"scope": [
 				"keyword",
-				"storage.type",
+				// "storage.type",
 				// "storage.modifier"
 			],
 			"settings": {
@@ -1024,8 +1030,11 @@
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
-		// -> Variables/Properties/Fields
-		"property": "#BF93D8",
+		// -> Class Variables/Properties/Fields
+		"property": {
+			"foreground": "#BF93D8",
+			"fontStyle": ""
+		},
 		"property.static": {
 			"foreground": "#BF93D8",
 			"fontStyle": "italic"
@@ -1034,7 +1043,37 @@
 			"foreground": "#BF93D8",
 			"fontStyle": "italic"
 		},
-		// -> Parameters
-		// "parameter": "#ff0000"
+
+		// -> Method and Function Parameters/Variables
+		"parameter": {
+			"foreground": "#A9B7C6",
+			"fontStyle": ""
+		},
+		"parameter.static": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "italic"
+		},
+		"parameter.readonly": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "italic"
+		},
+		"variable": {
+			"foreground": "#A9B7C6",
+			"fontStyle": ""
+		},
+		"variable.static": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "italic"
+		},
+		"variable.readonly": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "italic"
+		},
+
+		// -> Namespace (Import Statements)
+		"namespace": {
+			"foreground": "#A9B7C6",
+			"fontStyle": ""
+		}
 	},
 }
