@@ -191,26 +191,28 @@
 
 		// ### Start Custom ###
 
-		// -> Primitive Classes/Types
-		{
-			"name": "Primitive Types",
-			"scope": "storage.type.primitive",
-			"settings": {
-				"foreground": "#DB7E32",
-				"fontStyle": ""
-			}
-		},
-
-
-		// -> Annotations
+		// -> Annotations and Decorators
 		{
 			"name": "Annotation",
 			"scope": [
 				"storage.type.annotation",
-				"punctuation.definition.annotation"
+				"punctuation.definition.annotation",
+				"meta.decorator",
+				"meta.decorator entity.name.function",
+				"punctuation.decorator"
 			],
 			"settings": {
 				"foreground": "#BBB529",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Decorator Object Key",
+			"scope": [
+				"meta.decorator meta.object-literal.key",
+			],
+			"settings": {
+				"foreground": "#BF93D8",
 				"fontStyle": ""
 			}
 		},
@@ -219,6 +221,8 @@
 			"scope": [
 				"punctuation.definition.annotation-arguments.begin.bracket.round.java",
 				"punctuation.definition.annotation-arguments.end.bracket.round.java",
+				"meta.decorator meta.brace",
+				"meta.decorator variable"
 			],
 			"settings": {
 				"foreground": "#A9B7C6",
@@ -227,11 +231,12 @@
 		},
 
 
-		// -> Classes/Types
+		// -> Classes/Types/Interfaces
 		{
-			"name": "Class/Type Entity Identifier",
+			"name": "Class/Type/Interface Entity Identifier",
 			"scope": [
-				"entity.name.type.class"
+				"entity.name.type.class",
+				"entity.name.type.interface"
 			],
 			"settings": {
 				"foreground": "#d9e4eb",
@@ -239,14 +244,28 @@
 			}
 		},
 		{
-			"name": "Class/Type Variable",
+			"name": "Class/Type/Interface Variable",
 			"scope": [
 				"meta.definition.variable storage.type",
 				"meta.method.identifier storage.type",
-				"meta.class meta.method "
+				// ts class variable name
+				"entity.name.type",
+				"support.class",
+				// New object declaration
+				"new.expr entity.name.function",
 			],
 			"settings": {
 				"foreground": "#d9e4eb",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Class/Type Variable Enclosure",
+			"scope": [
+				"meta.definition.variable punctuation",
+			],
+			"settings": {
+				"foreground": "#A9B7C6",
 				"fontStyle": ""
 			}
 		},
@@ -257,6 +276,32 @@
 			],
 			"settings": {
 				"foreground": "#d9e4eb",
+				"fontStyle": ""
+			}
+		},
+
+		{
+			"name": "Inherited Classes/Interfaces",
+			"scope": [
+				"entity.other.inherited-class",
+			],
+			"settings": {
+				"foreground": "#d9e4eb",
+				"fontStyle": ""
+			}
+		},
+
+
+		// -> Primitive Classes/Types
+		{
+			"name": "Primitive Types",
+			"scope": [
+				"storage.type.primitive",
+				"support.type.primitive",
+				"support.type.builtin",
+			],
+			"settings": {
+				"foreground": "#DB7E32",
 				"fontStyle": ""
 			}
 		},
@@ -279,9 +324,10 @@
 		{
 			"name": "Class Variables/Properties/Fields",
 			"scope": [
-				"variable",
 				"meta.class variable",
-				"meta.method-call"
+				"meta.class.body variable",
+				// ts class property
+				"meta.field variable.object.property",
 			],
 			"settings": {
 				"foreground": "#BF93D8",
@@ -293,8 +339,14 @@
 			"name": "Method and Function Variables/Parameters",
 			"scope": [
 				"variable.parameter",
+				"meta.method.body variable",
 				"meta.method-call",
-				"variable.other.definition meta.method.variable"
+				"variable.other.definition meta.method.variable",
+				// ts method property
+				"meta.method variable.other",
+				"meta.block variable.other",
+				// ts arrow function property
+				"meta.arrow variable.other",
 			],
 			"settings": {
 				"foreground": "#A9B7C6",
@@ -302,12 +354,19 @@
 			}
 		},
 		
-		// -> Keywords and Values
+		// -> Keywords, Values, and Punctuation
 		{
 			"name": "Keywords",
 			"scope": [
 				"keyword",
+				"keyword.control",
 				"storage.modifier",
+				"storage.type.class",
+				"storage.type.interface",
+				// constructor
+				"meta.method.declaration storage.type",
+				// this
+				"variable.language.this",
 			],
 			"settings": {
 				"foreground": "#DB7E32",
@@ -315,18 +374,48 @@
 			}
 		},
 
-
+		{
+			"name": "Enclosures ",
+			"scope": [
+				"punctuation",
+				"punctuation.definition.parameters",
+				"punctuation.section.class",
+				"punctuation.section.method",
+				"meta.brace.round",
+			],
+			"settings": {
+				"foreground": "#A9B7C6",
+				"fontStyle": ""
+			}
+		},
 
 		{
-			"name": "Enclosures and Punctuation",
+			"name": "Punctuation",
 			"scope": [
 				"punctuation.definition.parameters",
 				"punctuation.section.class",
 				"punctuation.section.method",
 				"punctuation.separator",
+				"punctuation.separator.key-value",
+				"meta.method-call punctuation.separator.period",
+				"punctuation.separator.period",
+				// '!'
+				"keyword.operator.logical"
 			],
 			"settings": {
 				"foreground": "#A9B7C6",
+				"fontStyle": ""
+			}
+		},
+
+		{
+			"name": "Terminators and Separators",
+			"scope": [
+				"punctuation.terminator",
+				"punctuation.separator"
+			],
+			"settings": {
+				"foreground": "#DB7E32",
 				"fontStyle": ""
 			}
 		},
@@ -337,7 +426,7 @@
 				"storage.type",
 			],
 			"settings": {
-				"foreground": "#A9B7C6",
+				"foreground": "#DB7E32",
 				"fontStyle": ""
 			}
 		},
@@ -398,11 +487,13 @@
 		{
 			"name": "Operators",
 			"scope": [
+				"keyword.operator",
+				"keyword.operator.comparison",
 				"keyword.operator.assignment",
-				"keyword.operator.arithmetic"
+				"keyword.operator.arithmetic",
 			],
 			"settings": {
-				"foreground": "#dddddd",
+				"foreground": "#A9B7C6",
 				"fontStyle": ""
 			}
 		},
@@ -410,7 +501,6 @@
 		{
 			"name": "Operator, Misc",
 			"scope": [
-				"keyword.control",
 				"constant.other.color",
 				"punctuation",
 				"meta.tag",
@@ -421,22 +511,44 @@
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"keyword.other.substitution",
+				"meta.return.type keyword.operator.type",
+				// ts arrow function arrow
+				"storage.type.function.arrow"
 			],
 			"settings": {
-				"foreground": "#DB7E32"
+				"foreground": "#A9B7C6"
 			}
 		},
 
 		{
+			"name": "Catch All?",
+			"scope": [
+				"meta.class meta.method",
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+
+
+
+
+		// -> Import Statements
+		{
 			"name": "Import Statement",
-			"scope": "storage.modifier.import",
+			"scope": [
+				"storage.modifier.import",
+				"storage.modifier.package",
+				"variable.other.readwrite.alias",
+				"storage.modifier.import punctuation.separator",
+				"storage.modifier.package punctuation.separator"
+			],
 			"settings": {
 				"foreground": "#A9B7C6",
 				"fontStyle": ""
 			}
 		},
-
 
 		// ### End Custom ###
 
@@ -473,6 +585,7 @@
 			"name": "Keyword, Storage",
 			"scope": [
 				"keyword",
+				
 				// "storage.type",
 				// "storage.modifier"
 			],
@@ -508,7 +621,7 @@
 		{
 			"name": "Block Level Variables",
 			"scope": [
-				"meta.block variable.other"
+				// "meta.block variable.other"
 			],
 			"settings": {
 				"foreground": "#f07178"
@@ -546,7 +659,7 @@
 				// "string",
 				"constant.other.symbol",
 				"constant.other.key",
-				"entity.other.inherited-class",
+				// "entity.other.inherited-class",
 				"markup.heading",
 				"markup.inserted.git_gutter",
 				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
@@ -560,7 +673,7 @@
 			"scope": [
 				"entity.name",
 				"support.type",
-				"support.class",
+				// "support.class",
 				"support.other.namespace.use.php",
 				"meta.use.php",
 				"support.other.namespace.php",
@@ -1030,6 +1143,22 @@
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
+		// -> Annotation
+		"annotation": {
+			"foreground": "#BBB529",
+			"fontStyle": ""
+		},
+
+		// -> Class and Interface
+		"class": {
+			"foreground": "#d9e4eb",
+			"fontStyle": ""
+		},
+		"interface": {
+			"foreground": "#d9e4eb",
+			"fontStyle": ""
+		},
+
 		// -> Class Variables/Properties/Fields
 		"property": {
 			"foreground": "#BF93D8",
@@ -1042,6 +1171,10 @@
 		"property.readonly": {
 			"foreground": "#BF93D8",
 			"fontStyle": "italic"
+		},
+		"property.declaration": {
+			"foreground": "#BF93D8",
+			"fontStyle": ""
 		},
 
 		// -> Method and Function Parameters/Variables
@@ -1057,6 +1190,10 @@
 			"foreground": "#A9B7C6",
 			"fontStyle": "italic"
 		},
+		"parameter.modification": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "underline"
+		},
 		"variable": {
 			"foreground": "#A9B7C6",
 			"fontStyle": ""
@@ -1069,6 +1206,37 @@
 			"foreground": "#A9B7C6",
 			"fontStyle": "italic"
 		},
+		"variable.modification": {
+			"foreground": "#A9B7C6",
+			"fontStyle": "underline"
+		},
+
+		// -> Method and Function
+		"method": {
+			"foreground": "#FFC66D",
+			"fontStyle": ""
+		},
+		"method.static": {
+			"foreground": "#FFC66D",
+			"fontStyle": "italic"
+		},
+
+		// -> String
+		"string": {
+			"foreground": "#70a858",
+			"fontStyle": ""
+		},
+
+		// -> Enum
+		"enum": {
+			"foreground": "#A9B7C6",
+			"fontStyle": ""
+		},
+		"enumMember": {
+			"foreground": "#BF93D8",
+			"fontStyle": "italic"
+		},
+
 
 		// -> Namespace (Import Statements)
 		"namespace": {
