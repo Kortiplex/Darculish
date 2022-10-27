@@ -72,7 +72,7 @@
 		"tab.unfocusedActiveForeground": "#bbbbbb",
 		"tab.unfocusedHoverBackground": "#27292a",
 		"tab.unfocusedInactiveForeground": "#bbbbbb",
-		"terminal.background": "#252526",
+		"terminal.background": "#2B2B2B",
 		"terminal.foreground": "#bbbbbb",
 		"titleBar.activeBackground": "#3c3f41",
 		"titleBar.border": "#303030",
@@ -80,7 +80,10 @@
 		"notebook.cellBorderColor": "#45494a",
 		"notebook.cellEditorBackground": "#313335",
 		"notebook.focusedCellBorder": "#007fd4",
-		"notebook.focusedEditorBorder": "#007fd4"
+		"notebook.focusedEditorBorder": "#007fd4",
+		"diffEditorGutter.insertedLineBackground": "#385570",
+		"diffEditor.insertedTextBackground": "#294436",
+		"diffEditor.insertedLineBackground": "#303c47",
 	},
 	"tokenColors": [
 		{
