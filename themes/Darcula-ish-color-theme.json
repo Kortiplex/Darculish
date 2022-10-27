@@ -225,8 +225,8 @@
 		{
 			"name": "Annotation Extras",
 			"scope": [
-				"punctuation.definition.annotation-arguments.begin.bracket.round.java",
-				"punctuation.definition.annotation-arguments.end.bracket.round.java",
+				"punctuation.definition.annotation-arguments.begin.bracket.round",
+				"punctuation.definition.annotation-arguments.end.bracket.round",
 				"meta.decorator meta.brace",
 				"meta.decorator variable"
 			],
@@ -380,7 +380,8 @@
 				"meta.method.declaration storage.type",
 				// this
 				"variable.language.this",
-				"punctuation.definition.keyword"
+				"punctuation.definition.keyword",
+				"constant.language"
 			],
 			"settings": {
 				"foreground": "#CC7832",
@@ -1311,6 +1312,41 @@
 		//# Python End
 
 
+		// # Java Start
+		{
+			"name": "Java Javadoc Comment",
+			"scope": [
+				"comment.block.javadoc",
+				"comment.block.javadoc punctuation.definition.comment",
+			],
+			"settings": {
+				"foreground": "#629755",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Java Javadoc Keyword",
+			"scope": [
+				"comment.block.javadoc keyword.other.documentation.javadoc",
+			],
+			"settings": {
+				"foreground": "#629755",
+				"fontStyle": "italic bold underline"
+			}
+		},
+		{
+			"name": "Java Javadoc Parameter",
+			"scope": [
+				"comment.block.javadoc variable.parameter",
+			],
+			"settings": {
+				"foreground": "#8a653b",
+				"fontStyle": ""
+			}
+		},
+		// # Java End
+
+
 		// # TypeScript Start
 		{
 			"name": "Type Parameter",
@@ -2015,26 +2051,35 @@
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
+
 		// -> Annotation
 		"annotation": {
 			"foreground": "#BBB529",
-			"fontStyle": ""
 		},
 
 		// -> Class and Interface
-		"class": {
-			"foreground": "#d9e4eb",
-			"fontStyle": ""
-		},
+		// "class": {
+		// 	"foreground": "#d9e4eb",
+		// },
 		"interface": {
 			"foreground": "#d9e4eb",
-			"fontStyle": ""
+		},
+		
+		// -> Type Parameter
+		"typeParameter": {
+			"foreground": "#507874",
+		},
+		"typeParameter.static": {
+			"foreground": "#507874",
+			"fontStyle": "italic"
+		},
+		"typeParameter.readonly": {
+			"foreground": "#507874",
 		},
 
 		// -> Class Variables/Properties/Fields
 		"property": {
 			"foreground": "#9876aa",
-			"fontStyle": ""
 		},
 		"property.static": {
 			"foreground": "#9876aa",
@@ -2042,13 +2087,11 @@
 		},
 		"property.readonly": {
 			"foreground": "#9876aa",
-			"fontStyle": "italic"
 		},
 
 		// -> Method and Function Parameters/Variables
 		"parameter": {
 			"foreground": "#A9B7C6",
-			"fontStyle": ""
 		},
 		"parameter.static": {
 			"foreground": "#A9B7C6",
@@ -2056,7 +2099,6 @@
 		},
 		"parameter.readonly": {
 			"foreground": "#A9B7C6",
-			"fontStyle": "italic"
 		},
 		"parameter.modification": {
 			"foreground": "#A9B7C6",
@@ -2068,7 +2110,6 @@
 		},
 		"variable": {
 			"foreground": "#A9B7C6",
-			"fontStyle": ""
 		},
 		"variable.static": {
 			"foreground": "#A9B7C6",
@@ -2076,7 +2117,6 @@
 		},
 		"variable.readonly": {
 			"foreground": "#A9B7C6",
-			"fontStyle": "italic"
 		},
 		"variable.modification": {
 			"foreground": "#A9B7C6",
@@ -2086,7 +2126,6 @@
 		// -> Method and Function
 		"method": {
 			"foreground": "#FFC66D",
-			"fontStyle": ""
 		},
 		"method.static": {
 			"foreground": "#FFC66D",
@@ -2096,37 +2135,23 @@
 		// -> String
 		"string": {
 			"foreground": "#6a8759",
-			"fontStyle": ""
 		},
 
 		// -> Enum
 		"enum": {
 			"foreground": "#A9B7C6",
-			"fontStyle": ""
 		},
 		"enumMember": {
 			"foreground": "#9876aa",
 			"fontStyle": "italic"
 		},
 
-		// -> Type Parameter
-		"typeParameter": {
-			"foreground": "#507874",
-			"fontStyle": ""
-		},
-		"typeParameter.static": {
-			"foreground": "#507874",
-			"fontStyle": "italic"
-		},
-		"typeParameter.readonly": {
-			"foreground": "#507874",
-			"fontStyle": "italic"
-		},
-
 		// -> Namespace (Import Statements)
 		"namespace": {
 			"foreground": "#A9B7C6",
-			"fontStyle": ""
-		}
+		},
+		"testClass": {
+			"foreground": "#ff00d4",
+		},
 	},
 }

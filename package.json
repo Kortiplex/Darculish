@@ -12,9 +12,23 @@
   "contributes": {
     "semanticTokenTypes": [
       {
-        "id": "parameterTest",
-        "superType": "parameter",
-        "description": "test things idk"
+        "id": "testClass",
+        "superType": "class",
+        "description": "Test Token Type"
+      }
+    ],
+    "semanticTokenModifiers": [
+      {
+        "id": "native",
+        "description": "Annotates a symbol that is implemented natively"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "language": "java",
+        "scopes": {
+          "templateClass": ["entity.name.type.class"]
+        }
       }
     ],
     "themes": [
