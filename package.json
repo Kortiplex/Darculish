@@ -10,6 +10,13 @@
     "Themes"
   ],
   "contributes": {
+    "semanticTokenTypes": [
+      {
+        "id": "parameterTest",
+        "superType": "parameter",
+        "description": "test things idk"
+      }
+    ],
     "themes": [
       {
         "label": "Darcula-ish",
