@@ -1,16 +1,18 @@
-# darcula-ish README
+# Darcula-ish README
 
-## Working with Markdown
+## Description
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+Darcula-ish is a theme for Visual Studio Code that attempts to color the editor, syntax highlightying, and semantic highlighting as close to Jet Brain's Darcula theme. **This is still a WIP effort, so not all colors may be correct.**
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## Supported Languages
 
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* Java
+* Javascript/Typescript
+* Python
+* CSS
+* SASS/SCSS
+* HTML
+* XML
+* Markdown
+* JSON
+* EditorConfig
