@@ -1,6 +1,5 @@
 {
 	"name": "Darcula-ish",
-	// TODO: More work needs to be done on getting the exact colors down
 	"colors": {
 		"editor.background": "#2b2b2b",
 		"editorSuggestWidget.selectedBackground": "#264f78",
