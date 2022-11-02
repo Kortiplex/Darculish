@@ -1646,7 +1646,6 @@
 			"scope": [
 				"markup.bold markup.italic",
 				"markup.italic markup.bold",
-				"markup.quote markup.bold",
 				"markup.bold markup.italic string",
 				"markup.italic markup.bold string",
 				"markup.quote markup.bold string"
