@@ -1257,6 +1257,15 @@
 		
 		// # Python Start
 		{
+			"name": "Python Base",
+			"scope": [
+				"source.python"
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
 			"name": "Python Function Call Param",
 			"scope": [
 				"variable.parameter.function-call"
