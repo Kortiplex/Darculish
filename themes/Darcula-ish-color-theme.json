@@ -1372,6 +1372,16 @@
 				"fontStyle": ""
 			}
 		},
+		{
+			"name": "Python Keyword Operator Logical",
+			"scope": [
+				"source.python keyword.operator.logical",
+			],
+			"settings": {
+				"foreground": "#CC7832",
+				"fontStyle": ""
+			}
+		},
 		//# Python End
 
 
