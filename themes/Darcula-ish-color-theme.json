@@ -673,6 +673,15 @@
 		// # HTML Start
 		// -> HTML Tags and Attributes
 		{
+			"name": "HTML Text Derivative",
+			"scope": [
+				"text.html.derivative",
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
 			"name": "HTML Tag",
 			"scope": [
 				"entity.name.tag",
@@ -684,7 +693,6 @@
 				"foreground": "#E8BF6A"
 			}
 		},
-		
 		{
 			"name": "HTML Tag Attribute",
 			"scope": [
