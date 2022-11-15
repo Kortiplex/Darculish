@@ -1265,6 +1265,15 @@
 		
 		// # Python Start
 		{
+			"name": "Python Base",
+			"scope": [
+				"source.python"
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
 			"name": "Python Function Call Param",
 			"scope": [
 				"variable.parameter.function-call"
@@ -1368,6 +1377,16 @@
 			],
 			"settings": {
 				"foreground": "#A5C261",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Python Keyword Operator Logical",
+			"scope": [
+				"source.python keyword.operator.logical",
+			],
+			"settings": {
+				"foreground": "#CC7832",
 				"fontStyle": ""
 			}
 		},
@@ -1654,7 +1673,6 @@
 			"scope": [
 				"markup.bold markup.italic",
 				"markup.italic markup.bold",
-				"markup.quote markup.bold",
 				"markup.bold markup.italic string",
 				"markup.italic markup.bold string",
 				"markup.quote markup.bold string"
