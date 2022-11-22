@@ -372,6 +372,7 @@
 				"punctuation.definition.keyword",
 				"constant.language",
 				"keyword.operator.new",
+				"keyword.operator.expression.of"
 			],
 			"settings": {
 				"foreground": "#CC7832",
