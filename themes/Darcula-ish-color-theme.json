@@ -2314,5 +2314,9 @@
 			"foreground": "#629755",
 			"fontStyle": "italic bold underline"
 		},
+
+		// -> Self Parameter
+		"selfParameter": {
+			"foreground": "#94558d"}
 	},
 }
