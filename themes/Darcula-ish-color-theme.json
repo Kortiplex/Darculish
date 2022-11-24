@@ -370,7 +370,9 @@
 				// this
 				"variable.language.this",
 				"punctuation.definition.keyword",
-				"constant.language"
+				"constant.language",
+				"keyword.operator.new",
+				"keyword.operator.expression.of"
 			],
 			"settings": {
 				"foreground": "#CC7832",
