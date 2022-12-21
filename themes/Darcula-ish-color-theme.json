@@ -1959,6 +1959,18 @@
 		// # Markdown End
 
 
+		// Katex
+		{
+			"name": "Embedded Katex",
+			"scope": [
+				"meta.embedded.block.katex"
+			],
+			"settings": {
+				"foreground": "#33ce9a"
+			}
+		},
+
+
 		// # EditorConfig Start
 		{
 			"name": "EditorConfig Property Key",
