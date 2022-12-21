@@ -370,7 +370,9 @@
 				// this
 				"variable.language.this",
 				"punctuation.definition.keyword",
-				"constant.language"
+				"constant.language",
+				"keyword.operator.new",
+				"keyword.operator.expression.of"
 			],
 			"settings": {
 				"foreground": "#CC7832",
@@ -673,6 +675,15 @@
 		// # HTML Start
 		// -> HTML Tags and Attributes
 		{
+			"name": "HTML Text Derivative",
+			"scope": [
+				"text.html.derivative",
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
 			"name": "HTML Tag",
 			"scope": [
 				"entity.name.tag",
@@ -684,7 +695,6 @@
 				"foreground": "#E8BF6A"
 			}
 		},
-		
 		{
 			"name": "HTML Tag Attribute",
 			"scope": [
@@ -2318,5 +2328,9 @@
 			"foreground": "#629755",
 			"fontStyle": "italic bold underline"
 		},
+
+		// -> Self Parameter
+		"selfParameter": {
+			"foreground": "#94558d"}
 	},
 }
