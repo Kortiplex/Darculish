@@ -2224,6 +2224,9 @@
 		"interface": {
 			"foreground": "#d9e4eb",
 		},
+		"type": {
+			"foreground": "#d9e4eb",
+		},
 		
 		// -> Type Parameter
 		"typeParameter": {
