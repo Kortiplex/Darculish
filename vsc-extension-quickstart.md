@@ -26,3 +26,7 @@ To learn more about scopes and how they're used, check out the [color theme](htt
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+
+## WANT TO JUST SLAP IT IN AND HAVE IT WORK?
+Simply copy and past this project into your user `.vscode/extensions` dir, where all the other extensions are located.
+Then you should be able to just go to the theme settings and select it.
