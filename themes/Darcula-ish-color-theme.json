@@ -2221,6 +2221,10 @@
 		// # JSON End
 		
 	],
+
+
+	// # Semantic Highlighting
+
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 
@@ -2312,6 +2316,7 @@
 			"foreground": "#6a8759",
 		},
 
+		// TODO: Eval. if we should color enums to be more like a class?
 		// -> Enum
 		"enum": {
 			"foreground": "#A9B7C6",
