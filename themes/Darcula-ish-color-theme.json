@@ -2339,6 +2339,22 @@
 
 		// -> Self Parameter
 		"selfParameter": {
-			"foreground": "#94558d"}
+			"foreground": "#94558d"},
+
+		// ## XML
+		"xmlDocCommentName": {
+			"foreground": "#629755",
+			"fontStyle": "italic bold"
+		},
+
+		"xmlDocCommentDelimiter":  {
+			"foreground": "#629755",
+			"fontStyle": "italic"
+		},
+
+		"xmlDocCommentText": {
+			"foreground": "#629755",
+			"fontStyle": "italic"
+		},
 	},
 }
