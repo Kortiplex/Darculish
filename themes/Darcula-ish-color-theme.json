@@ -1,5 +1,5 @@
 {
-	"name": "Darcula-ish",
+	"name": "Darculish",
 	"colors": {
 		"editor.background": "#2b2b2b",
 		"editorSuggestWidget.selectedBackground": "#264f78",
@@ -106,10 +106,10 @@
 
 		// -> Start Comment Section
 		{
-			"name": "Comment",
+			"name": "Comment Line",
 			"scope": [
-				"comment",
-				"punctuation.definition.comment"
+				"comment.line",
+				"comment.line punctuation.definition.comment"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -117,13 +117,18 @@
 			}
 		},
 		{
-			"scope": ["comment.line", "comment.block"],
+			"name": "Comment Block",
+			"scope": [
+				"comment.block",
+				"comment.block punctuation.definition.comment"
+			],
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#808080"
+				"foreground": "#6b8b8b"
 			}
 		},
-			{
+		{
+			"name": "Comment Documentation",
 			"scope": [
 				"comment.block.preprocessor",
 				"comment.block.documentation",
@@ -2356,5 +2361,11 @@
 			"foreground": "#629755",
 			"fontStyle": "italic"
 		},
+
+		// "comment": {
+		// 	"foreground": "#ff0000",
+		// 	"fontStyle": ""
+		// },
+		
 	},
 }
