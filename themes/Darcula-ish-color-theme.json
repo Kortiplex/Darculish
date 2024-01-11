@@ -1,5 +1,7 @@
 {
 	"name": "Darculish",
+	"author": "aWalker-0",
+	"type": "dark",
 	"colors": {
 		"editor.background": "#2b2b2b",
 		"editorSuggestWidget.selectedBackground": "#264f78",
