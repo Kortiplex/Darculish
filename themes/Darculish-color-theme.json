@@ -15,8 +15,8 @@
 		"editorGroupHeader.tabsBackground": "#3c3f41",
 		"editorGroupHeader.tabsBorder": "#505050",
 		"editorGutter.background": "#313335",
-		"editorIndentGuide.activeBackground": "#555555",
-		"editorIndentGuide.background": "#373737",
+		"editorIndentGuide.activeBackground1": "#555555",
+		"editorIndentGuide.background1": "#373737",
 		"editorLineNumber.activeForeground": "#a4a3a3",
 		"editorLineNumber.foreground": "#606366",
 		"editorRuler.foreground": "#464646",
@@ -43,7 +43,6 @@
 		"dropdown.foreground": "#bbbbbb",
 		"dropdown.listBackground": "#646464",
 		"focusBorder": "#FFFFFF00",
-		"gitDecoration.ignoredResourceForeground": "#6d6d6d",
 		"input.background": "#45494a",
 		"input.border": "#646464",
 		"input.foreground": "#bbbbbb",
@@ -82,9 +81,26 @@
 		"notebook.cellEditorBackground": "#313335",
 		"notebook.focusedCellBorder": "#007fd4",
 		"notebook.focusedEditorBorder": "#007fd4",
-		"diffEditorGutter.insertedLineBackground": "#385570",
-		"diffEditor.insertedTextBackground": "#294436",
-		"diffEditor.insertedLineBackground": "#303c47",
+
+		// TODO: Review these colors and change them in accordance with the actual theme
+		// # Git & Diff
+		"gitDecoration.addedResourceForeground": "#a9dc76",
+        "gitDecoration.conflictingResourceForeground": "#fc9867",
+        "gitDecoration.deletedResourceForeground": "#ff6188",
+        "gitDecoration.ignoredResourceForeground": "#5b595c",
+        "gitDecoration.modifiedResourceForeground": "#ffd866",
+        "gitDecoration.stageDeletedResourceForeground": "#ff6188",
+        "gitDecoration.stageModifiedResourceForeground": "#ffd866",
+        "gitDecoration.untrackedResourceForeground": "#c1c0c0",
+		"diffEditor.insertedTextBackground": "#294436", // Correct
+		"diffEditor.insertedLineBackground": "#303c47", // Correct
+		"diffEditor.diagonalFill": "#403e41",
+        "diffEditor.removedLineBackground": "#ff618819",
+        "diffEditor.removedTextBackground": "#ff618819",
+        "diffEditorOverview.insertedForeground": "#a9dc76a5",
+        "diffEditorOverview.removedForeground": "#ff6188a5",
+        "diffEditorGutter.removedLineBackground": "#ff618819",
+		"diffEditorGutter.insertedLineBackground": "#385570", // Correct
 	},
 	"tokenColors": [
 		{
@@ -1503,6 +1519,7 @@
 			"settings": {
 				"foreground": "#507874"
 			}
+			// TODO: Is applying this type parameter style to imported modules. Ex: `export function activate(context: vscode.ExtensionContext) {`, the `vscode` part is getting highlighted, which is not desired.
 		},
 		// # TypeScript End
 
@@ -2020,8 +2037,75 @@
 		},
 		// # EditorConfig End
 
-
-		
+		// TODO: Review these colors and change them in accordance with the actual theme
+		// # Git & Diff Start
+		{
+            "scope": "comment.git-status.header.remote",
+			"name": "Git status remote",
+            "settings": { "foreground": "#ff6188" }
+        },
+        {
+            "scope": "comment.git-status.header.local",
+			"name": "Git status remote",
+            "settings": { "foreground": "#78dce8" }
+        },
+        {
+            "scope": "comment.other.git-status.head",
+			"name": "Git status remote",
+            "settings": { "foreground": "#fcfcfa" }
+        },
+		{
+            "scope": ["markup.inserted", "markup.inserted punctuation.definition.inserted"],
+			"name": "Diff inserted", 
+            "settings": { "foreground": "#a9dc76" }
+        },
+        {
+            "scope": ["markup.deleted", "markup.deleted punctuation.definition.deleted"],
+			"name": "Diff deleted", 
+            "settings": { "foreground": "#ff6188" }
+        },
+        {
+            "scope": ["markup.changed", "markup.changed punctuation.definition.changed"],
+			"name": "Diff changed", 
+            "settings": { "foreground": "#ffd866" }
+        },
+        {
+            "scope": ["markup.ignored", "markup.ignored punctuation.definition.ignored"],
+			"name": "Diff ignored", 
+            "settings": { "foreground": "#939293" }
+        },
+        { 
+			"scope": "markup.untracked",
+			"name": "Diff untracked",  
+			"settings": { "foreground": "#939293" } 
+		},
+		{ "scope": "meta.diff.git-diff.header", "settings": { "name": "git diff header", "foreground": "#ffd866" } },
+		{
+            "scope": [
+                "source.git-show.author",
+                "source.git-show.date",
+                "source.git-diff.command",
+                "source.git-diff.command meta.diff.git-diff.header.from-file",
+                "source.git-diff.command meta.diff.git-diff.header.to-file"
+            ],
+            "settings": { "name": "git", "foreground": "#939293" }
+        },
+        {
+            "scope": [
+                "source.git-show meta.diff.git-diff.header.extended.index.from-sha",
+                "source.git-show meta.diff.git-diff.header.extended.index.to-sha"
+            ],
+            "settings": { "name": "git diff header hash", "foreground": "#ab9df2" }
+        },
+        {
+            "scope": "source.git-show meta.diff.range.unified",
+            "settings": { "name": "git diff header range", "foreground": "#fc9867" }
+        },
+        {
+            "scope": ["source.git-show meta.diff.header.from-file", "source.git-show meta.diff.header.to-file"],
+            "settings": { "name": "git diff header files", "foreground": "#939293" }
+        },
+		// # Git End
 		
 
 		// ? Catch-All
@@ -2083,15 +2167,17 @@
 				"foreground": "#A9B7C6"
 			}
 		},
-		{
-			"name": "Inserted",
-			"scope": [
-				"markup.inserted"
-			],
-			"settings": {
-				"foreground": "#294436"
-			}
-		},
+		// -> Disabled due to overriding inserted text in GitLens
+		// {
+		// 	"name": "Inserted",
+		// 	"scope": [
+		// 		"markup.inserted"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#294436"
+		// 	}
+		// },
+		// -> Disabled due to overriding inserted text in GitLens
 		{
 			"name": "Deleted",
 			"scope": [
@@ -2101,6 +2187,7 @@
 				"foreground": "#484a4a"
 			}
 		},
+		// -> Disabled due to overriding inserted text in GitLens
 		{
 			"name": "Changed",
 			"scope": [
@@ -2364,10 +2451,7 @@
 			"fontStyle": "italic"
 		},
 
-		// "comment": {
-		// 	"foreground": "#ff0000",
-		// 	"fontStyle": ""
-		// },
+		"markupAttribute": "#ff0000"
 		
 	},
 }
