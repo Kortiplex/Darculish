@@ -6,6 +6,7 @@
     "url": "https://github.com/Kortiplex/Darculish"
   },
   "publisher": "Kortiplex",
+  "icon": "icon.png",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.95.0"
