@@ -1,9 +1,9 @@
 {
   "name": "darculish",
   "displayName": "Darculish",
-  "description": "Visual Studio Code theme that aims to replicate the style of JetBrain's Darcula theme.",
+  "description": "A Visual Studio Code theme that aims to replicate the style of JetBrain's Darcula theme.",
   "repository": {
-    "url": "https://github.com/aWalker-0/Darculish"
+    "url": "https://github.com/Kortiplex/Darculish"
   },
   "version": "1.0.0",
   "engines": {
