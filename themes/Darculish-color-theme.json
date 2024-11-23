@@ -7,7 +7,7 @@
 		"editorSuggestWidget.selectedBackground": "#264f78",
 		"editorSuggestWidget.background": "#323738",
 		"editor.foreground": "#A9B7C6",
-		"editor.inactiveSelectionBackground": "#0d293e",
+		"editor.inactiveSelectionBackground": "#0d293efa",
 		"editor.lineHighlightBackground": "#323232",
 		"editor.selectionBackground": "#264f78",
 		"editorCodeLens.foreground": "#565c63",
